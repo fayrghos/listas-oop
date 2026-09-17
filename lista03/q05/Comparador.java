@@ -2,27 +2,41 @@ package lista03.q05;
 
 public class Comparador {
 
-    public static int maior(int... numeros) {
-        int maior = numeros[0];
-
-        for (int numero : numeros) {
-            if (numero > maior) {
-                maior = numero;
-            }
-        }
-
-        return maior;
+    public static int maior(int a, int b) {
+        return a > b ? a : b;
     }
 
-    public static double maior(double... numeros) {
-        double maior = numeros[0];
+    public static int maior(int a, int b, int c) {
+        return Comparador.maior(Comparador.maior(a, b), c);
+    }
 
-        for (double numero : numeros) {
-            if (numero > maior) {
-                maior = numero;
-            }
-        }
+    public static int maior(int a, int b, int c, int d) {
+        return Comparador.maior(Comparador.maior(a, b, c), d);
+    }
 
-        return maior;
+    public static int maior(int a, int b, int c, int d, int e) {
+        return Comparador.maior(Comparador.maior(a, b, c, d), e);
+    }
+
+    public static double maior(double a, double b) {
+        return a > b ? a : b;
+    }
+
+    public static double maior(double a, double b, double c) {
+        return Comparador.maior(Comparador.maior(a, b), c);
+    }
+
+    public static double maior(double a, double b, double c, double d) {
+        return Comparador.maior(Comparador.maior(a, b, c), d);
+    }
+
+    public static double maior(
+        double a,
+        double b,
+        double c,
+        double d,
+        double e
+    ) {
+        return Comparador.maior(Comparador.maior(a, b, c, d), e);
     }
 }
